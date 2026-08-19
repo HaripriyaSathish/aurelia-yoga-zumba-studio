@@ -21,7 +21,7 @@ export default function WhyChooseUs({ features }) {
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.5, delay: (i % 4) * 0.08 }}
               whileHover={{ y: -6 }}
-              className="glass rounded-2xl p-6 flex flex-col items-start gap-4 border border-white/10 hover:border-[#FF6B4A]/40 transition-colors duration-300"
+              className="glass rounded-2xl p-6 flex flex-col items-start gap-4 border border-white/10 hover-glow transition-colors duration-300"
             >
               <div className="w-12 h-12 rounded-xl gradient-coral flex items-center justify-center animate-float" style={{ animationDelay: `${i * 0.3}s` }}>
                 <DynamicIcon name={f.icon} className="w-6 h-6 text-white" />

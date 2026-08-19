@@ -51,7 +51,7 @@ export default function MapSection({ settings }) {
               href={directMapUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-8 w-full py-3.5 rounded-full gradient-coral text-white text-sm font-semibold flex items-center justify-center gap-2 hover:shadow-[0_8px_24px_rgba(255,107,74,0.4)] transition-all duration-300"
+              className="mt-8 w-full py-3.5 rounded-full gradient-coral text-white text-sm font-semibold flex items-center justify-center gap-2 hover-glow-strong transition-all duration-300"
             >
               <Navigation className="w-4 h-4" /> Get Directions
             </a>

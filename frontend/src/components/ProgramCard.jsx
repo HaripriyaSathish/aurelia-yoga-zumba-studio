@@ -13,7 +13,7 @@ export default function ProgramCard({ program, index = 0, whatsappNumber, whatsa
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.55, delay: (index % 3) * 0.1 }}
       whileHover={{ y: -8 }}
-      className="group relative rounded-3xl overflow-hidden glass border border-white/10 flex flex-col"
+      className="group relative rounded-3xl overflow-hidden glass border border-white/10 flex flex-col hover-glow"
     >
       <div className="relative h-56 overflow-hidden">
         <img

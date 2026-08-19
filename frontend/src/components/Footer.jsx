@@ -47,13 +47,13 @@ export default function Footer({ settings }) {
               Premium yoga & Zumba studio dedicated to helping you move your body and elevate your energy.
             </p>
             <div className="flex items-center gap-3 mt-6">
-              <a href={instagram} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full glass flex items-center justify-center hover:bg-[#FF6B4A] transition-colors" aria-label="Instagram">
+              <a href={instagram} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full glass flex items-center justify-center hover:bg-[#FF6B4A] hover-glow transition-colors" aria-label="Instagram">
                 <InstagramIcon className="w-4 h-4" />
               </a>
-              <a href={facebook} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full glass flex items-center justify-center hover:bg-[#FF6B4A] transition-colors" aria-label="Facebook">
+              <a href={facebook} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full glass flex items-center justify-center hover:bg-[#FF6B4A] hover-glow transition-colors" aria-label="Facebook">
                 <FacebookIcon className="w-4 h-4" />
               </a>
-              <a href={youtube} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full glass flex items-center justify-center hover:bg-[#FF6B4A] transition-colors" aria-label="YouTube">
+              <a href={youtube} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full glass flex items-center justify-center hover:bg-[#FF6B4A] hover-glow transition-colors" aria-label="YouTube">
                 <YoutubeIcon className="w-4 h-4" />
               </a>
               <button onClick={scrollToTop} className="w-9 h-9 rounded-full gradient-coral flex items-center justify-center ml-1 hover:-translate-y-0.5 transition-transform" aria-label="Back to top">

@@ -69,7 +69,7 @@ export default function Schedule({ schedule }) {
                   initial={{ opacity: 0, x: -16 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.06 }}
-                  className="glass rounded-2xl p-5 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 border border-white/10"
+                  className="glass rounded-2xl p-5 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 border border-white/10 hover-glow"
                 >
                   <div className={`w-1.5 self-stretch rounded-full ${slot.category === 'yoga' ? 'bg-[#9B6BFF]' : 'bg-[#FF6B4A]'}`} />
                   <div className="flex-1">

@@ -44,7 +44,7 @@ export default function CTASection({ cta, settings }) {
         >
           <a
             href={cta.primary_button_link || '#contact'}
-            className="px-8 py-4 rounded-full text-sm sm:text-base font-semibold text-white gradient-coral shadow-[0_10px_30px_rgba(255,107,74,0.35)] hover:-translate-y-0.5 transition-all duration-300"
+            className="px-8 py-4 rounded-full text-sm sm:text-base font-semibold text-white gradient-coral shadow-[0_10px_30px_rgba(255,107,74,0.35)] hover-glow-strong hover:-translate-y-0.5 transition-all duration-300"
           >
             {cta.primary_button_text || 'Book Free Trial'}
           </a>

@@ -117,7 +117,7 @@ function FabButton({ btn, activeTooltip, setActiveTooltip, showLabelMobile = fal
         rel={btn.rel}
         onMouseEnter={() => setActiveTooltip(btn.id)}
         onMouseLeave={() => setActiveTooltip(null)}
-        className={`w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center text-white shadow-[0_8px_25px_rgba(0,0,0,0.4)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.5)] hover:scale-108 transition-all duration-300 ${btn.bgClass}`}
+        className={`w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center text-white shadow-[0_8px_25px_rgba(0,0,0,0.4)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.5)] hover:scale-108 hover-glow-strong transition-all duration-300 ${btn.bgClass}`}
         aria-label={btn.name}
       >
         <Icon className="w-5 h-5 sm:w-6 sm:h-6" />

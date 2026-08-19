@@ -65,7 +65,7 @@ export default function Navbar({ settings }) {
             </a>
             <a
               href="#contact"
-              className="px-5 py-2.5 rounded-full text-sm font-semibold text-white gradient-coral hover:shadow-[0_8px_24px_rgba(255,107,74,0.4)] hover:-translate-y-0.5 transition-all duration-300"
+              className="px-5 py-2.5 rounded-full text-sm font-semibold text-white gradient-coral hover-glow-strong hover:-translate-y-0.5 transition-all duration-300"
             >
               Book Free Trial
             </a>

@@ -21,7 +21,7 @@ export default function Trainers({ trainers }) {
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.55, delay: (i % 4) * 0.1 }}
               whileHover={{ y: -8 }}
-              className="group relative rounded-3xl overflow-hidden border border-white/10"
+              className="group relative rounded-3xl overflow-hidden border border-white/10 hover-glow"
             >
               <div className="relative h-80 overflow-hidden">
                 <img

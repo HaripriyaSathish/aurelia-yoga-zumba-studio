@@ -31,7 +31,7 @@ function ReelCard({ reel, index }) {
       viewport={{ once: true, margin: '-40px' }}
       transition={{ duration: 0.55, delay: (index % 4) * 0.1 }}
       whileHover={{ y: -6 }}
-      className="relative aspect-[9/16] rounded-3xl overflow-hidden group cursor-pointer border border-white/10 bg-[#141715]"
+      className="relative aspect-[9/16] rounded-3xl overflow-hidden group cursor-pointer border border-white/10 bg-[#141715] hover-glow"
       onClick={togglePlay}
     >
       <video

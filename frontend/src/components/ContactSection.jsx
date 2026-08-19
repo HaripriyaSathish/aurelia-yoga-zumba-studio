@@ -196,7 +196,7 @@ export default function ContactSection({ settings }) {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full py-4 rounded-full text-sm font-semibold text-white gradient-coral hover:shadow-[0_10px_30px_rgba(255,107,74,0.35)] transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50"
+                className="w-full py-4 rounded-full text-sm font-semibold text-white gradient-coral hover-glow-strong transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50"
               >
                 {loading ? 'Sending...' : (<><Send className="w-4 h-4" /> Send Enquiry</>)}
               </button>

@@ -53,7 +53,7 @@ export default function Gallery({ gallery }) {
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.5, delay: (i % 6) * 0.06 }}
               onClick={() => openLightbox(i)}
-              className={`relative w-full block break-inside-avoid rounded-2xl overflow-hidden group ${i % 5 === 0 ? 'aspect-[3/4]' : 'aspect-square'}`}
+              className={`relative w-full block break-inside-avoid rounded-2xl overflow-hidden group hover-glow ${i % 5 === 0 ? 'aspect-[3/4]' : 'aspect-square'}`}
             >
               <img
                 src={item.thumbnail_url || item.image_url}

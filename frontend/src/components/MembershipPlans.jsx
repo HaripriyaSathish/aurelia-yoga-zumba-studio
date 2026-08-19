@@ -28,7 +28,7 @@ export default function MembershipPlans({ plans, settings }) {
                 viewport={{ once: true, margin: '-40px' }}
                 transition={{ duration: 0.55, delay: (i % 4) * 0.1 }}
                 whileHover={{ y: -8 }}
-                className={`relative rounded-3xl p-7 flex flex-col ${
+                className={`relative rounded-3xl p-7 flex flex-col hover-glow ${
                   plan.is_highlighted
                     ? 'gradient-coral text-white shadow-[0_20px_50px_rgba(255,107,74,0.35)] scale-[1.03]'
                     : 'glass border border-white/10 text-[#FBF7F0]'
@@ -61,7 +61,7 @@ export default function MembershipPlans({ plans, settings }) {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`mt-7 w-full text-center py-3 rounded-full text-sm font-semibold transition-all duration-300 ${
+                  className={`mt-7 w-full text-center py-3 rounded-full text-sm font-semibold hover-glow-strong transition-all duration-300 ${
                     plan.is_highlighted
                       ? 'bg-white text-[#FF6B4A] hover:shadow-xl'
                       : 'gradient-coral text-white hover:shadow-[0_8px_24px_rgba(255,107,74,0.4)]'

@@ -96,7 +96,7 @@ export default function Hero({ hero, heroStats, settings }) {
         >
           <a
             href={hero?.primary_cta_link || '#contact'}
-            className="px-8 py-4 rounded-full text-sm sm:text-base font-semibold text-white gradient-coral shadow-[0_10px_30px_rgba(255,107,74,0.35)] hover:shadow-[0_14px_40px_rgba(255,107,74,0.5)] hover:-translate-y-0.5 transition-all duration-300"
+            className="px-8 py-4 rounded-full text-sm sm:text-base font-semibold text-white gradient-coral shadow-[0_10px_30px_rgba(255,107,74,0.35)] hover-glow-strong hover:-translate-y-0.5 transition-all duration-300"
           >
             {hero?.primary_cta_text || 'Book a Free Trial'}
           </a>

@@ -35,7 +35,7 @@ class Command(BaseCommand):
         hero = HeroContent.load()
         hero.headline = "Move Your Body. Elevate Your Energy."
         hero.subtitle = "Premium yoga, energetic Zumba and holistic wellness programs guided by certified experts — designed to transform your mind, body and spirit."
-        hero.background_video_url = "https://cdn.coverr.co/videos/coverr-yoga-practice-at-sunrise-2633/1080p.mp4"
+        hero.background_video_url = ""
         hero.poster_image_url = "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1920&auto=format&fit=crop"
         hero.primary_cta_text = "Book a Free Trial"
         hero.primary_cta_link = "#contact"
@@ -230,13 +230,13 @@ class Command(BaseCommand):
         # --- Video Reels ---
         VideoReel.objects.all().delete()
         reels_data = [
-            ("Sunrise Yoga Flow", "https://cdn.coverr.co/videos/coverr-yoga-practice-at-sunrise-2633/1080p.mp4",
+            ("Sunrise Yoga Flow", "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
              "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop", "0:22"),
-            ("Zumba High Energy", "https://cdn.coverr.co/videos/coverr-zumba-dance-class-6349/1080p.mp4",
+            ("Zumba High Energy", "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
              "https://images.unsplash.com/photo-1508672019048-805c876b67e2?q=80&w=800&auto=format&fit=crop", "0:18"),
-            ("Power Stretch Series", "https://cdn.coverr.co/videos/coverr-stretching-before-workout-4491/1080p.mp4",
+            ("Power Stretch Series", "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
              "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=800&auto=format&fit=crop", "0:25"),
-            ("Studio Tour", "https://cdn.coverr.co/videos/coverr-fitness-studio-interior-8291/1080p.mp4",
+            ("Studio Tour", "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
              "https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=800&auto=format&fit=crop", "0:30"),
         ]
         for i, (title, video_url, poster_url, duration) in enumerate(reels_data):
