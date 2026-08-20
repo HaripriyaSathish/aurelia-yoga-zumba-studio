@@ -24,7 +24,7 @@ export default function Schedule({ schedule }) {
   );
 
   return (
-    <section id="schedule" className="relative py-24 md:py-32 bg-[#141715]">
+    <section id="schedule" className="relative py-16 md:py-20 bg-[#141715]">
       <div className="max-w-5xl mx-auto px-5 sm:px-8">
         <SectionHeading
           eyebrow="Weekly Schedule"

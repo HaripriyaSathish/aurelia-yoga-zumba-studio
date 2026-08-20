@@ -14,7 +14,7 @@ export default function MapSection({ settings }) {
     `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`;
 
   return (
-    <section className="relative py-24 md:py-32 bg-[#141715]">
+    <section className="relative py-16 md:py-20 bg-[#141715]">
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <div className="grid lg:grid-cols-12 gap-6 items-stretch">
           <motion.div

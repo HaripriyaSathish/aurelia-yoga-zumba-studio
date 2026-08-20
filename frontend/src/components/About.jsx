@@ -13,7 +13,7 @@ export default function About({ about }) {
   ];
 
   return (
-    <section id="about" className="relative py-24 md:py-32 bg-[#0B0D0C] overflow-hidden">
+    <section id="about" className="relative py-16 md:py-20 bg-[#0B0D0C] overflow-hidden">
       <div className="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-[#9B6BFF]/10 blur-[100px]" />
       <div className="absolute -bottom-24 -right-24 w-96 h-96 rounded-full bg-[#FF6B4A]/10 blur-[100px]" />
 

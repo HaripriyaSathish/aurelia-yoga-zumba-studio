@@ -7,7 +7,7 @@ export default function MembershipPlans({ plans, settings }) {
   const whatsapp = (settings?.whatsapp_number || '').replace(/[^0-9]/g, '');
 
   return (
-    <section id="membership" className="relative py-24 md:py-32 bg-[#141715]">
+    <section id="membership" className="relative py-16 md:py-20 bg-[#141715]">
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <SectionHeading
           eyebrow="Membership Plans"

@@ -19,7 +19,7 @@ export default function Testimonials({ testimonials }) {
   const go = (dir) => setIndex((i) => (i + dir + list.length) % list.length);
 
   return (
-    <section className="relative py-24 md:py-32 bg-[#0B0D0C] overflow-hidden">
+    <section className="relative py-16 md:py-20 bg-[#0B0D0C] overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[#FF6B4A]/5 blur-[120px]" />
       <div className="max-w-4xl mx-auto px-5 sm:px-8 relative">
         <SectionHeading

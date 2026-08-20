@@ -9,7 +9,7 @@ export default function CTASection({ cta, settings }) {
   const whatsappUrl = `https://wa.me/${whatsapp}?text=${encodeURIComponent(settings?.whatsapp_message || 'Hi, I am interested in joining your Yoga/Zumba classes.')}`;
 
   return (
-    <section id="contact-cta" className="relative py-28 md:py-36 overflow-hidden">
+    <section id="contact-cta" className="relative py-20 md:py-24 overflow-hidden">
       <div className="absolute inset-0">
         <img src={cta.background_image_url} alt="" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-[#0B0D0C]/80 via-[#0B0D0C]/70 to-[#0B0D0C]" />

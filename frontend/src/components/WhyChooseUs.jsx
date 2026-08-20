@@ -5,7 +5,7 @@ import DynamicIcon from '../utils/icons.jsx';
 
 export default function WhyChooseUs({ features }) {
   return (
-    <section className="relative py-24 md:py-32 bg-[#0B0D0C]">
+    <section className="relative py-16 md:py-20 bg-[#0B0D0C]">
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <SectionHeading
           eyebrow="Why Choose Us"
