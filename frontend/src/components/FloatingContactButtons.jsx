@@ -6,6 +6,7 @@ export default function FloatingContactButtons({ settings }) {
   const [bottomOffset, setBottomOffset] = useState(24);
   const [expanded, setExpanded] = useState(false);
   const [activeTooltip, setActiveTooltip] = useState(null);
+  const [visible, setVisible] = useState(false);
 
   const phone = settings?.phone_number || '+91 98765 43210';
   const whatsapp = settings?.whatsapp_number || '+91 98765 43210';
@@ -21,18 +22,25 @@ export default function FloatingContactButtons({ settings }) {
   useEffect(() => {
     const handleScroll = () => {
       const footer = document.getElementById('site-footer');
-      if (!footer) {
-        setBottomOffset(24);
-        return;
-      }
-      const footerRect = footer.getBoundingClientRect();
       const windowHeight = window.innerHeight;
       const defaultGap = 24;
-      if (footerRect.top < windowHeight) {
-        setBottomOffset(windowHeight - footerRect.top + defaultGap);
-      } else {
+
+      if (!footer) {
         setBottomOffset(defaultGap);
+      } else {
+        const footerRect = footer.getBoundingClientRect();
+        if (footerRect.top < windowHeight) {
+          setBottomOffset(windowHeight - footerRect.top + defaultGap);
+        } else {
+          setBottomOffset(defaultGap);
+        }
       }
+
+      // Hide the floating cluster while the hero section is on screen — the hero
+      // already has its own WhatsApp/Call links, so this avoids overlap there.
+      const hero = document.getElementById('top');
+      const heroBottom = hero ? hero.getBoundingClientRect().bottom : 0;
+      setVisible(heroBottom < windowHeight * 0.6);
     };
     handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -51,7 +59,9 @@ export default function FloatingContactButtons({ settings }) {
 
   return (
     <div
-      className="fixed right-4 sm:right-6 z-40 flex flex-col-reverse items-end gap-3 transition-[bottom] duration-150 ease-out"
+      className={`fixed right-4 sm:right-6 z-40 flex flex-col-reverse items-end gap-3 transition-[bottom,opacity] duration-300 ease-out ${
+        visible ? 'opacity-100' : 'opacity-0 pointer-events-none'
+      }`}
       style={{ bottom: `${bottomOffset}px` }}
       aria-label="Floating Contact Channels"
     >

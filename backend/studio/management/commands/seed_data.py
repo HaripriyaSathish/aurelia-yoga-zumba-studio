@@ -130,7 +130,7 @@ class Command(BaseCommand):
              "https://images.unsplash.com/photo-1518310383802-640c2de311b2?q=80&w=1000&auto=format&fit=crop", "Sanya Kapoor"),
             ("Beginner Yoga", "An approachable introduction to yoga fundamentals, alignment and breathing.",
              "45 mins", "beginner", "Mon to Sat — 9:00 AM", 1699,
-             "https://images.unsplash.com/photo-1599447292180-45fd84092ef4?q=80&w=1000&auto=format&fit=crop", "Sanya Kapoor"),
+             "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1000&auto=format&fit=crop", "Sanya Kapoor"),
         ]
         for i, (name, desc, dur, level, sched, price, img, trainer_name) in enumerate(yoga_data):
             YogaProgram.objects.create(
@@ -219,7 +219,7 @@ class Command(BaseCommand):
             ('image', 'event', 'Annual Wellness Retreat', 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1200&auto=format&fit=crop'),
             ('image', 'zumba', 'Bollywood fitness class', 'https://images.unsplash.com/photo-1524594152303-9fd13543fe6e?q=80&w=1200&auto=format&fit=crop'),
             ('image', 'studio', 'Meditation lounge', 'https://images.unsplash.com/photo-1593810450967-f9c42742e326?q=80&w=1200&auto=format&fit=crop'),
-            ('image', 'yoga', 'Vinyasa flow at sunset', 'https://images.unsplash.com/photo-1599447292180-45fd84092ef4?q=80&w=1200&auto=format&fit=crop'),
+            ('image', 'yoga', 'Vinyasa flow at sunset', 'https://images.unsplash.com/photo-1544033527-b192daee1f5b?q=80&w=1200&auto=format&fit=crop'),
             ('image', 'event', 'Community wellness day', 'https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?q=80&w=1200&auto=format&fit=crop'),
             ('image', 'studio', 'Fully equipped fitness floor', 'https://images.unsplash.com/photo-1518310383802-640c2de311b2?q=80&w=1200&auto=format&fit=crop'),
         ]
@@ -231,9 +231,9 @@ class Command(BaseCommand):
         VideoReel.objects.all().delete()
         reels_data = [
             ("Sunrise Yoga Flow", "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-             "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop", "0:22"),
+             "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800&auto=format&fit=crop", "0:22"),
             ("Zumba High Energy", "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
-             "https://images.unsplash.com/photo-1508672019048-805c876b67e2?q=80&w=800&auto=format&fit=crop", "0:18"),
+             "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop", "0:18"),
             ("Power Stretch Series", "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
              "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=800&auto=format&fit=crop", "0:25"),
             ("Studio Tour", "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
