@@ -69,7 +69,7 @@ export default function App() {
   }, [isLoading]);
 
   return (
-    <div className="min-h-screen bg-[#0B0D0C] text-[#FBF7F0] selection:bg-[#FF6B4A] selection:text-white font-sans">
+    <div className="min-h-screen bg-[#0A1614] text-[#FBF7F0] selection:bg-[#1FBF8F] selection:text-white font-sans">
       <Loader isLoading={isLoading} />
 
       <Navbar settings={settings} />

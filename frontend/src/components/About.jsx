@@ -13,9 +13,9 @@ export default function About({ about }) {
   ];
 
   return (
-    <section id="about" className="relative py-16 md:py-20 bg-[#0B0D0C] overflow-hidden">
-      <div className="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-[#9B6BFF]/10 blur-[100px]" />
-      <div className="absolute -bottom-24 -right-24 w-96 h-96 rounded-full bg-[#FF6B4A]/10 blur-[100px]" />
+    <section id="about" className="relative py-16 md:py-20 bg-[#0A1614] overflow-hidden">
+      <div className="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-[#14B8A6]/10 blur-[100px]" />
+      <div className="absolute -bottom-24 -right-24 w-96 h-96 rounded-full bg-[#1FBF8F]/10 blur-[100px]" />
 
       <div className="max-w-7xl mx-auto px-5 sm:px-8 relative grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
         {/* Animated image collage */}
@@ -51,7 +51,7 @@ export default function About({ about }) {
             transition={{ duration: 0.7, delay: 0.4 }}
             src={about.image_3_url}
             alt="Zumba class"
-            className="absolute top-[18%] right-[2%] w-[36%] h-[36%] object-cover rounded-2xl shadow-2xl border-4 border-[#0B0D0C]"
+            className="absolute top-[18%] right-[2%] w-[36%] h-[36%] object-cover rounded-2xl shadow-2xl border-4 border-[#0A1614]"
           />
         </motion.div>
 
@@ -61,7 +61,7 @@ export default function About({ about }) {
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-xs md:text-sm font-semibold tracking-[0.25em] uppercase text-[#FF6B4A] mb-4 block"
+            className="text-xs md:text-sm font-semibold tracking-[0.25em] uppercase text-[#1FBF8F] mb-4 block"
           >
             {about.eyebrow}
           </motion.span>
@@ -79,7 +79,7 @@ export default function About({ about }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.16 }}
-            className="mt-6 text-base md:text-lg leading-relaxed text-[#A8A29A]"
+            className="mt-6 text-base md:text-lg leading-relaxed text-[#B9C7C2]"
           >
             {about.description}
           </motion.p>
@@ -99,7 +99,7 @@ export default function About({ about }) {
                   suffix={s.suffix}
                   className="font-display font-extrabold text-3xl sm:text-4xl gradient-text"
                 />
-                <p className="mt-1.5 text-sm text-[#A8A29A]">{s.label}</p>
+                <p className="mt-1.5 text-sm text-[#B9C7C2]">{s.label}</p>
               </motion.div>
             ))}
           </div>

@@ -4,7 +4,7 @@ import ProgramCard from './ProgramCard.jsx';
 
 export default function YogaPrograms({ programs, settings }) {
   return (
-    <section id="yoga-programs" className="relative py-16 md:py-20 bg-[#0B0D0C]">
+    <section id="yoga-programs" className="relative py-16 md:py-20 bg-[#0A1614]">
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <SectionHeading
           eyebrow="Yoga Programs"

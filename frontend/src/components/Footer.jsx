@@ -35,7 +35,7 @@ export default function Footer({ settings }) {
   ];
 
   return (
-    <footer id="site-footer" className="bg-[#0B0D0C] text-[#FBF7F0] border-t border-white/10 pt-16 pb-8 relative z-10">
+    <footer id="site-footer" className="bg-[#0A1614] text-[#FBF7F0] border-t border-white/10 pt-16 pb-8 relative z-10">
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <div className="grid md:grid-cols-12 gap-10 pb-10 border-b border-white/10">
           <div className="md:col-span-4">
@@ -43,17 +43,17 @@ export default function Footer({ settings }) {
               <span className="text-2xl">🧘</span>
               <span className="font-display font-extrabold text-lg">AURELIA</span>
             </div>
-            <p className="text-sm text-[#A8A29A] leading-relaxed max-w-xs">
+            <p className="text-sm text-[#B9C7C2] leading-relaxed max-w-xs">
               Premium yoga & Zumba studio dedicated to helping you move your body and elevate your energy.
             </p>
             <div className="flex items-center gap-3 mt-6">
-              <a href={instagram} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full glass flex items-center justify-center hover:bg-[#FF6B4A] hover-glow transition-colors" aria-label="Instagram">
+              <a href={instagram} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full glass flex items-center justify-center hover:bg-[#1FBF8F] hover-glow transition-colors" aria-label="Instagram">
                 <InstagramIcon className="w-4 h-4" />
               </a>
-              <a href={facebook} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full glass flex items-center justify-center hover:bg-[#FF6B4A] hover-glow transition-colors" aria-label="Facebook">
+              <a href={facebook} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full glass flex items-center justify-center hover:bg-[#1FBF8F] hover-glow transition-colors" aria-label="Facebook">
                 <FacebookIcon className="w-4 h-4" />
               </a>
-              <a href={youtube} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full glass flex items-center justify-center hover:bg-[#FF6B4A] hover-glow transition-colors" aria-label="YouTube">
+              <a href={youtube} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full glass flex items-center justify-center hover:bg-[#1FBF8F] hover-glow transition-colors" aria-label="YouTube">
                 <YoutubeIcon className="w-4 h-4" />
               </a>
               <button onClick={scrollToTop} className="w-9 h-9 rounded-full gradient-coral flex items-center justify-center ml-1 hover:-translate-y-0.5 transition-transform" aria-label="Back to top">
@@ -68,7 +68,7 @@ export default function Footer({ settings }) {
               <ul className="space-y-2.5">
                 {col.links.map((l) => (
                   <li key={l.label}>
-                    <a href={l.href} className="text-sm text-[#A8A29A] hover:text-[#FF6B4A] transition-colors">{l.label}</a>
+                    <a href={l.href} className="text-sm text-[#B9C7C2] hover:text-[#1FBF8F] transition-colors">{l.label}</a>
                   </li>
                 ))}
               </ul>
@@ -77,23 +77,23 @@ export default function Footer({ settings }) {
 
           <div className="md:col-span-4">
             <h4 className="font-display font-semibold text-sm uppercase tracking-wider mb-4">Contact</h4>
-            <ul className="space-y-3 text-sm text-[#A8A29A]">
+            <ul className="space-y-3 text-sm text-[#B9C7C2]">
               <li className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-[#FF6B4A] shrink-0 mt-0.5" /> <span>{address}</span>
+                <MapPin className="w-4 h-4 text-[#1FBF8F] shrink-0 mt-0.5" /> <span>{address}</span>
               </li>
               <li className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-[#FF6B4A] shrink-0" />
-                <a href={`tel:${phone.replace(/[^0-9+]/g, '')}`} className="hover:text-[#FF6B4A]">{phone}</a>
+                <Phone className="w-4 h-4 text-[#1FBF8F] shrink-0" />
+                <a href={`tel:${phone.replace(/[^0-9+]/g, '')}`} className="hover:text-[#1FBF8F]">{phone}</a>
               </li>
               <li className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-[#FF6B4A] shrink-0" />
-                <a href={`mailto:${email}`} className="hover:text-[#FF6B4A]">{email}</a>
+                <Mail className="w-4 h-4 text-[#1FBF8F] shrink-0" />
+                <a href={`mailto:${email}`} className="hover:text-[#1FBF8F]">{email}</a>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-[#A8A29A]/70 gap-3">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-[#B9C7C2]/70 gap-3">
           <span>© {new Date().getFullYear()} {siteName}. All rights reserved.</span>
           <div className="flex gap-5">
             <span>Privacy Policy</span>

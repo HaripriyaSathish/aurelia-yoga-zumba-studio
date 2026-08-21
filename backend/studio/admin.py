@@ -10,7 +10,7 @@ from .models import (
 def img_preview(url, size=48, radius=6):
     if url:
         return format_html(
-            '<img src="{}" style="width:{}px;height:{}px;object-fit:cover;border-radius:{}px;border:1px solid #FF6B4A55;" />',
+            '<img src="{}" style="width:{}px;height:{}px;object-fit:cover;border-radius:{}px;border:1px solid #1FBF8F55;" />',
             url, size, size, radius
         )
     return "—"
@@ -207,7 +207,7 @@ class EnquiryAdmin(admin.ModelAdmin):
     def status_badge(self, obj):
         if obj.is_read:
             return format_html('<span style="background:#22c55e;color:#fff;padding:3px 8px;border-radius:12px;font-size:11px;">Read</span>')
-        return format_html('<span style="background:#FF6B4A;color:#fff;padding:3px 8px;border-radius:12px;font-size:11px;font-weight:bold;">NEW</span>')
+        return format_html('<span style="background:#1FBF8F;color:#fff;padding:3px 8px;border-radius:12px;font-size:11px;font-weight:bold;">NEW</span>')
     status_badge.short_description = "Status"
 
     def mark_as_read(self, request, queryset):

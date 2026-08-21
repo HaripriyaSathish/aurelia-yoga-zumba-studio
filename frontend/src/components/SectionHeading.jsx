@@ -11,7 +11,7 @@ export default function SectionHeading({ eyebrow, title, subtitle, align = 'cent
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-xs md:text-sm font-semibold tracking-[0.25em] uppercase text-[#FF6B4A] mb-4"
+          className="text-xs md:text-sm font-semibold tracking-[0.25em] uppercase text-[#1FBF8F] mb-4"
         >
           {eyebrow}
         </motion.span>
@@ -21,7 +21,7 @@ export default function SectionHeading({ eyebrow, title, subtitle, align = 'cent
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.08 }}
-        className={`font-display font-extrabold text-balance leading-[1.08] text-3xl sm:text-4xl md:text-5xl ${light ? 'text-[#0B0D0C]' : 'text-[#FBF7F0]'}`}
+        className={`font-display font-extrabold text-balance leading-[1.08] text-3xl sm:text-4xl md:text-5xl ${light ? 'text-[#0A1614]' : 'text-[#FBF7F0]'}`}
       >
         {title}
       </motion.h2>
@@ -31,7 +31,7 @@ export default function SectionHeading({ eyebrow, title, subtitle, align = 'cent
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.16 }}
-          className={`mt-5 text-base md:text-lg leading-relaxed ${light ? 'text-[#0B0D0C]/70' : 'text-[#A8A29A]'}`}
+          className={`mt-5 text-base md:text-lg leading-relaxed ${light ? 'text-[#0A1614]/70' : 'text-[#B9C7C2]'}`}
         >
           {subtitle}
         </motion.p>

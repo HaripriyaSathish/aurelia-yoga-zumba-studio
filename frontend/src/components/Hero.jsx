@@ -24,7 +24,7 @@ export default function Hero({ hero, heroStats, settings }) {
   const phone = settings?.phone_number || '';
 
   return (
-    <section id="top" ref={ref} className="relative h-[100svh] min-h-[640px] w-full overflow-hidden bg-[#0B0D0C]">
+    <section id="top" ref={ref} className="relative h-[100svh] min-h-[640px] w-full overflow-hidden bg-[#0A1614]">
       {/* Background video / poster with parallax */}
       <motion.div style={{ y }} className="absolute inset-0 -top-10 -bottom-10">
         {hero?.background_video_url ? (
@@ -57,7 +57,7 @@ export default function Hero({ hero, heroStats, settings }) {
           transition={{ delay: 0.2, duration: 0.6 }}
           className="mb-6 inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass text-xs sm:text-sm font-medium tracking-[0.2em] uppercase text-[#FBF7F0]/85"
         >
-          <span className="w-1.5 h-1.5 rounded-full bg-[#FF6B4A] animate-pulse-ring" />
+          <span className="w-1.5 h-1.5 rounded-full bg-[#1FBF8F] animate-pulse-ring" />
           Premium Yoga & Zumba Studio
         </motion.span>
 
@@ -96,7 +96,7 @@ export default function Hero({ hero, heroStats, settings }) {
         >
           <a
             href={hero?.primary_cta_link || '#contact'}
-            className="px-8 py-4 rounded-full text-sm sm:text-base font-semibold text-white gradient-coral shadow-[0_10px_30px_rgba(255,107,74,0.35)] hover-glow-strong hover:-translate-y-0.5 transition-all duration-300"
+            className="px-8 py-4 rounded-full text-sm sm:text-base font-semibold text-white gradient-coral shadow-[0_10px_30px_rgba(31,191,143,0.35)] hover-glow-strong hover:-translate-y-0.5 transition-all duration-300"
           >
             {hero?.primary_cta_text || 'Book a Free Trial'}
           </a>
@@ -118,7 +118,7 @@ export default function Hero({ hero, heroStats, settings }) {
             <MessageCircle className="w-4 h-4" /> WhatsApp Us
           </a>
           <span className="w-1 h-1 rounded-full bg-[#FBF7F0]/30" />
-          <a href={`tel:${phone.replace(/[^0-9+]/g, '')}`} className="flex items-center gap-2 text-sm text-[#FBF7F0]/70 hover:text-[#FF6B4A] transition-colors">
+          <a href={`tel:${phone.replace(/[^0-9+]/g, '')}`} className="flex items-center gap-2 text-sm text-[#FBF7F0]/70 hover:text-[#1FBF8F] transition-colors">
             <Phone className="w-4 h-4" /> Call Us
           </a>
         </motion.div>

@@ -55,7 +55,7 @@ export default function ContactSection({ settings }) {
   };
 
   return (
-    <section id="contact" className="relative py-16 md:py-20 bg-[#0B0D0C]">
+    <section id="contact" className="relative py-16 md:py-20 bg-[#0A1614]">
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <SectionHeading
           eyebrow="Get In Touch"
@@ -76,12 +76,12 @@ export default function ContactSection({ settings }) {
               <h3 className="font-display font-bold text-xl text-[#FBF7F0] mb-6">Contact Details</h3>
               <div className="space-y-5">
                 <div className="flex items-center gap-3.5">
-                  <div className="w-10 h-10 rounded-full glass-coral flex items-center justify-center text-[#FF6B4A] shrink-0">
+                  <div className="w-10 h-10 rounded-full glass-coral flex items-center justify-center text-[#1FBF8F] shrink-0">
                     <Phone className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-[10px] text-[#A8A29A] uppercase tracking-wider block">Call Us</span>
-                    <a href={`tel:${cleanPhone}`} className="text-sm font-medium text-[#FBF7F0] hover:text-[#FF6B4A] transition-colors">{phone}</a>
+                    <span className="text-[10px] text-[#B9C7C2] uppercase tracking-wider block">Call Us</span>
+                    <a href={`tel:${cleanPhone}`} className="text-sm font-medium text-[#FBF7F0] hover:text-[#1FBF8F] transition-colors">{phone}</a>
                   </div>
                 </div>
                 <div className="flex items-center gap-3.5">
@@ -89,25 +89,25 @@ export default function ContactSection({ settings }) {
                     <MessageCircle className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-[10px] text-[#A8A29A] uppercase tracking-wider block">WhatsApp</span>
+                    <span className="text-[10px] text-[#B9C7C2] uppercase tracking-wider block">WhatsApp</span>
                     <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-[#FBF7F0] hover:text-[#25D366] transition-colors">{whatsapp}</a>
                   </div>
                 </div>
                 <div className="flex items-center gap-3.5">
-                  <div className="w-10 h-10 rounded-full glass-coral flex items-center justify-center text-[#FF6B4A] shrink-0">
+                  <div className="w-10 h-10 rounded-full glass-coral flex items-center justify-center text-[#1FBF8F] shrink-0">
                     <Mail className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-[10px] text-[#A8A29A] uppercase tracking-wider block">Email</span>
-                    <a href={`mailto:${email}`} className="text-sm font-medium text-[#FBF7F0] hover:text-[#FF6B4A] transition-colors">{email}</a>
+                    <span className="text-[10px] text-[#B9C7C2] uppercase tracking-wider block">Email</span>
+                    <a href={`mailto:${email}`} className="text-sm font-medium text-[#FBF7F0] hover:text-[#1FBF8F] transition-colors">{email}</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-3.5">
-                  <div className="w-10 h-10 rounded-full glass-coral flex items-center justify-center text-[#FF6B4A] shrink-0">
+                  <div className="w-10 h-10 rounded-full glass-coral flex items-center justify-center text-[#1FBF8F] shrink-0">
                     <MapPin className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-[10px] text-[#A8A29A] uppercase tracking-wider block">Studio Address</span>
+                    <span className="text-[10px] text-[#B9C7C2] uppercase tracking-wider block">Studio Address</span>
                     <span className="text-sm font-medium text-[#FBF7F0]">{address}</span>
                   </div>
                 </div>
@@ -137,7 +137,7 @@ export default function ContactSection({ settings }) {
                 <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                 <div>
                   <h4 className="text-xs font-semibold uppercase tracking-wider text-emerald-400">Enquiry received!</h4>
-                  <p className="text-xs text-[#A8A29A] mt-0.5 leading-relaxed">We've sent you a confirmation email. Our team will reach out within 24 hours.</p>
+                  <p className="text-xs text-[#B9C7C2] mt-0.5 leading-relaxed">We've sent you a confirmation email. Our team will reach out within 24 hours.</p>
                 </div>
               </div>
             )}
@@ -150,47 +150,47 @@ export default function ContactSection({ settings }) {
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-medium text-[#A8A29A] mb-1.5">Full Name *</label>
+                  <label className="block text-xs font-medium text-[#B9C7C2] mb-1.5">Full Name *</label>
                   <input
                     type="text" name="name" value={formData.name} onChange={handleChange} required
                     placeholder="Your name"
-                    className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-sm text-[#FBF7F0] placeholder-[#A8A29A]/50 focus:outline-none focus:border-[#FF6B4A] transition-colors"
+                    className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-sm text-[#FBF7F0] placeholder-[#B9C7C2]/50 focus:outline-none focus:border-[#1FBF8F] transition-colors"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-medium text-[#A8A29A] mb-1.5">Email Address *</label>
+                  <label className="block text-xs font-medium text-[#B9C7C2] mb-1.5">Email Address *</label>
                   <input
                     type="email" name="email" value={formData.email} onChange={handleChange} required
                     placeholder="you@example.com"
-                    className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-sm text-[#FBF7F0] placeholder-[#A8A29A]/50 focus:outline-none focus:border-[#FF6B4A] transition-colors"
+                    className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-sm text-[#FBF7F0] placeholder-[#B9C7C2]/50 focus:outline-none focus:border-[#1FBF8F] transition-colors"
                   />
                 </div>
               </div>
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-medium text-[#A8A29A] mb-1.5">Phone Number *</label>
+                  <label className="block text-xs font-medium text-[#B9C7C2] mb-1.5">Phone Number *</label>
                   <input
                     type="tel" name="phone" value={formData.phone} onChange={handleChange} required
                     placeholder="+91 98765 43210"
-                    className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-sm text-[#FBF7F0] placeholder-[#A8A29A]/50 focus:outline-none focus:border-[#FF6B4A] transition-colors"
+                    className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-sm text-[#FBF7F0] placeholder-[#B9C7C2]/50 focus:outline-none focus:border-[#1FBF8F] transition-colors"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-medium text-[#A8A29A] mb-1.5">Program Interested In</label>
+                  <label className="block text-xs font-medium text-[#B9C7C2] mb-1.5">Program Interested In</label>
                   <select
                     name="program_interested" value={formData.program_interested} onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-sm text-[#FBF7F0] focus:outline-none focus:border-[#FF6B4A] transition-colors"
+                    className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-sm text-[#FBF7F0] focus:outline-none focus:border-[#1FBF8F] transition-colors"
                   >
-                    {PROGRAM_OPTIONS.map((opt) => <option key={opt} value={opt} className="bg-[#141715]">{opt}</option>)}
+                    {PROGRAM_OPTIONS.map((opt) => <option key={opt} value={opt} className="bg-[#0F211D]">{opt}</option>)}
                   </select>
                 </div>
               </div>
               <div>
-                <label className="block text-xs font-medium text-[#A8A29A] mb-1.5">Message *</label>
+                <label className="block text-xs font-medium text-[#B9C7C2] mb-1.5">Message *</label>
                 <textarea
                   name="message" value={formData.message} onChange={handleChange} required rows="4"
                   placeholder="Tell us about your fitness goals or any questions you have..."
-                  className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-sm text-[#FBF7F0] placeholder-[#A8A29A]/50 focus:outline-none focus:border-[#FF6B4A] transition-colors resize-none"
+                  className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-sm text-[#FBF7F0] placeholder-[#B9C7C2]/50 focus:outline-none focus:border-[#1FBF8F] transition-colors resize-none"
                 />
               </div>
               <button

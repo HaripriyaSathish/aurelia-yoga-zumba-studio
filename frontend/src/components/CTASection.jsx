@@ -12,7 +12,7 @@ export default function CTASection({ cta, settings }) {
     <section id="contact-cta" className="relative py-20 md:py-24 overflow-hidden">
       <div className="absolute inset-0">
         <img src={cta.background_image_url} alt="" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0B0D0C]/80 via-[#0B0D0C]/70 to-[#0B0D0C]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0A1614]/80 via-[#0A1614]/70 to-[#0A1614]" />
       </div>
 
       <div className="relative max-w-3xl mx-auto px-5 sm:px-8 text-center">
@@ -44,7 +44,7 @@ export default function CTASection({ cta, settings }) {
         >
           <a
             href={cta.primary_button_link || '#contact'}
-            className="px-8 py-4 rounded-full text-sm sm:text-base font-semibold text-white gradient-coral shadow-[0_10px_30px_rgba(255,107,74,0.35)] hover-glow-strong hover:-translate-y-0.5 transition-all duration-300"
+            className="px-8 py-4 rounded-full text-sm sm:text-base font-semibold text-white gradient-coral shadow-[0_10px_30px_rgba(31,191,143,0.35)] hover-glow-strong hover:-translate-y-0.5 transition-all duration-300"
           >
             {cta.primary_button_text || 'Book Free Trial'}
           </a>

@@ -7,11 +7,11 @@ const MARQUEE_WORDS = ['ZUMBA', 'CARDIO', 'DANCE', 'ENERGY', 'FITNESS', 'RHYTHM'
 
 export default function FitnessPrograms({ programs, settings }) {
   return (
-    <section id="fitness-programs" className="relative py-16 md:py-20 bg-[#141715] overflow-hidden">
+    <section id="fitness-programs" className="relative py-16 md:py-20 bg-[#0F211D] overflow-hidden">
       <div className="absolute top-0 left-0 right-0 overflow-hidden py-3 border-y border-white/5 opacity-40 select-none pointer-events-none">
         <div className="flex whitespace-nowrap animate-marquee">
           {[...MARQUEE_WORDS, ...MARQUEE_WORDS, ...MARQUEE_WORDS].map((w, i) => (
-            <span key={i} className="font-display font-extrabold text-4xl md:text-6xl mx-6 text-transparent" style={{ WebkitTextStroke: '1px #FF6B4A' }}>
+            <span key={i} className="font-display font-extrabold text-4xl md:text-6xl mx-6 text-transparent" style={{ WebkitTextStroke: '1px #1FBF8F' }}>
               {w}
             </span>
           ))}

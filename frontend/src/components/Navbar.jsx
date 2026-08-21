@@ -49,7 +49,7 @@ export default function Navbar({ settings }) {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-[#FBF7F0]/80 hover:text-[#FF6B4A] transition-colors duration-200"
+                className="text-sm font-medium text-[#FBF7F0]/80 hover:text-[#1FBF8F] transition-colors duration-200"
               >
                 {link.label}
               </a>
@@ -59,7 +59,7 @@ export default function Navbar({ settings }) {
           <div className="hidden lg:flex items-center gap-4">
             <a
               href={`tel:${phone.replace(/[^0-9+]/g, '')}`}
-              className="flex items-center gap-2 text-sm font-medium text-[#FBF7F0]/80 hover:text-[#FF6B4A] transition-colors"
+              className="flex items-center gap-2 text-sm font-medium text-[#FBF7F0]/80 hover:text-[#1FBF8F] transition-colors"
             >
               <Phone className="w-4 h-4" /> {phone}
             </a>
@@ -87,7 +87,7 @@ export default function Navbar({ settings }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[60] bg-[#0B0D0C]/98 backdrop-blur-xl lg:hidden flex flex-col"
+            className="fixed inset-0 z-[60] bg-[#0A1614]/98 backdrop-blur-xl lg:hidden flex flex-col"
           >
             <div className="flex items-center justify-between px-5 py-5">
               <span className="font-display font-extrabold text-lg text-[#FBF7F0]">AURELIA</span>

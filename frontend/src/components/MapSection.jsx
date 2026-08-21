@@ -14,7 +14,7 @@ export default function MapSection({ settings }) {
     `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`;
 
   return (
-    <section className="relative py-16 md:py-20 bg-[#141715]">
+    <section className="relative py-16 md:py-20 bg-[#0F211D]">
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <div className="grid lg:grid-cols-12 gap-6 items-stretch">
           <motion.div
@@ -25,22 +25,22 @@ export default function MapSection({ settings }) {
             className="lg:col-span-5 glass rounded-3xl p-7 sm:p-9 flex flex-col justify-between"
           >
             <div>
-              <span className="text-xs font-semibold tracking-[0.25em] uppercase text-[#FF6B4A] mb-3 block">Find Us</span>
+              <span className="text-xs font-semibold tracking-[0.25em] uppercase text-[#1FBF8F] mb-3 block">Find Us</span>
               <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-[#FBF7F0] mb-2">{siteName}</h2>
-              <p className="text-sm text-[#A8A29A] mb-6">Visit our studio and experience premium wellness in person.</p>
+              <p className="text-sm text-[#B9C7C2] mb-6">Visit our studio and experience premium wellness in person.</p>
 
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <MapPin className="w-4 h-4 text-[#FF6B4A] shrink-0 mt-0.5" />
+                  <MapPin className="w-4 h-4 text-[#1FBF8F] shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-[10px] uppercase tracking-wider text-[#A8A29A] block mb-0.5">Address</span>
+                    <span className="text-[10px] uppercase tracking-wider text-[#B9C7C2] block mb-0.5">Address</span>
                     <p className="text-sm text-[#FBF7F0]">{address}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Clock className="w-4 h-4 text-[#FF6B4A] shrink-0 mt-0.5" />
+                  <Clock className="w-4 h-4 text-[#1FBF8F] shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-[10px] uppercase tracking-wider text-[#A8A29A] block mb-0.5">Opening Hours</span>
+                    <span className="text-[10px] uppercase tracking-wider text-[#B9C7C2] block mb-0.5">Opening Hours</span>
                     <p className="text-sm text-[#FBF7F0]">{openingHours}</p>
                   </div>
                 </div>
@@ -76,7 +76,7 @@ export default function MapSection({ settings }) {
               className="w-full h-full grayscale-[20%] contrast-[1.05]"
             />
             <div className="absolute top-4 left-4 glass rounded-full px-3.5 py-1.5 flex items-center gap-1.5 text-[10px] uppercase tracking-wider font-semibold text-[#FBF7F0]">
-              <Compass className="w-3.5 h-3.5 text-[#FF6B4A]" /> Studio Location
+              <Compass className="w-3.5 h-3.5 text-[#1FBF8F]" /> Studio Location
             </div>
           </motion.div>
         </div>

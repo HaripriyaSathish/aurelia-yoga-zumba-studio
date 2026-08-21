@@ -54,7 +54,7 @@ export default function FloatingContactButtons({ settings }) {
   const buttons = [
     { id: 'whatsapp', name: 'WhatsApp Us', icon: MessageCircle, href: whatsappUrl, target: '_blank', rel: 'noopener noreferrer', bgClass: 'bg-[#25D366] hover:bg-[#20ba59]', tooltip: 'Chat on WhatsApp' },
     { id: 'phone', name: 'Call Us', icon: Phone, href: callUrl, bgClass: 'gradient-coral', tooltip: `Call: ${phone}` },
-    { id: 'email', name: 'Email Us', icon: Mail, href: mailtoUrl, bgClass: 'bg-[#1D211E] border border-white/15', tooltip: `Email: ${email}` },
+    { id: 'email', name: 'Email Us', icon: Mail, href: mailtoUrl, bgClass: 'bg-[#163029] border border-white/15', tooltip: `Email: ${email}` },
   ];
 
   return (

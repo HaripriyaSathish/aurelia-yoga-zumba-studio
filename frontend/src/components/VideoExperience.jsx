@@ -31,7 +31,7 @@ function ReelCard({ reel, index }) {
       viewport={{ once: true, margin: '-40px' }}
       transition={{ duration: 0.55, delay: (index % 4) * 0.1 }}
       whileHover={{ y: -6 }}
-      className="relative aspect-[9/16] rounded-3xl overflow-hidden group cursor-pointer border border-white/10 bg-[#141715] hover-glow"
+      className="relative aspect-[9/16] rounded-3xl overflow-hidden group cursor-pointer border border-white/10 bg-[#0F211D] hover-glow"
       onClick={togglePlay}
     >
       <video
@@ -75,7 +75,7 @@ function ReelCard({ reel, index }) {
 
 export default function VideoExperience({ reels }) {
   return (
-    <section className="relative py-16 md:py-20 bg-[#141715]">
+    <section className="relative py-16 md:py-20 bg-[#0F211D]">
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <SectionHeading
           eyebrow="Short Video Experience"
