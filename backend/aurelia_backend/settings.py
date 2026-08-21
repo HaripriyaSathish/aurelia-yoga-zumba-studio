@@ -32,9 +32,10 @@ INSTALLED_APPS = [
 # Cloudinary (media file storage) — used when CLOUDINARY_URL is set (e.g. in production).
 # Falls back to local disk storage for local dev if unset.
 CLOUDINARY_URL = os.getenv('CLOUDINARY_URL', '')
-if CLOUDINARY_URL:
-    INSTALLED_APPS = ['cloudinary_storage'] + INSTALLED_APPS + ['cloudinary']
-    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+# Deliberately NOT added to INSTALLED_APPS: cloudinary_storage registers its own
+# collectstatic command that shadows Django's built-in one and breaks it when
+# static files aren't also routed through Cloudinary (we only want it for
+# media uploads). The storage backend below works fine as a plain import.
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
@@ -126,7 +127,28 @@ STATICFILES_DIRS = []
 # frontend/dist/assets/app.js -> /assets/app.js), independent of collectstatic.
 WHITENOISE_ROOT = FRONTEND_DIST
 WHITENOISE_INDEX_FILE = True
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+
+# Django 5.2 no longer honors the legacy DEFAULT_FILE_STORAGE/STATICFILES_STORAGE
+# settings at all (silently ignored) — the STORAGES dict is required instead.
+#
+# staticfiles: manifest-based storage requires `collectstatic` to have been run
+# (it needs a generated manifest to resolve {% static %} tags), which breaks the
+# admin UI in local dev unless that extra step is remembered, so it's only used
+# in production; local dev serves static files directly via runserver/finders.
+STORAGES = {
+    'default': {
+        'BACKEND': (
+            'cloudinary_storage.storage.MediaCloudinaryStorage' if CLOUDINARY_URL
+            else 'django.core.files.storage.FileSystemStorage'
+        ),
+    },
+    'staticfiles': {
+        'BACKEND': (
+            'whitenoise.storage.CompressedStaticFilesStorage' if not DEBUG
+            else 'django.contrib.staticfiles.storage.StaticFilesStorage'
+        ),
+    },
+}
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
