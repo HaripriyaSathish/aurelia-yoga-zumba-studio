@@ -111,7 +111,7 @@ class HeroContent(SingletonModel):
     background_video_url = models.URLField(
         max_length=500,
         blank=True,
-        default="https://cdn.coverr.co/videos/coverr-yoga-practice-at-sunrise-2633/1080p.mp4",
+        default="",
     )
     poster_image = models.ImageField(upload_to='hero/', blank=True, null=True)
     poster_image_url = models.URLField(
