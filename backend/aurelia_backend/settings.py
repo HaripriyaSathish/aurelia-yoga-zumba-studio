@@ -35,7 +35,7 @@ CLOUDINARY_URL = os.getenv('CLOUDINARY_URL', '')
 if CLOUDINARY_URL:
     INSTALLED_APPS = ['cloudinary_storage'] + INSTALLED_APPS + ['cloudinary']
     DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-    
+
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
@@ -117,11 +117,13 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+# The built React app is served directly via WHITENOISE_ROOT below (as the
+# site's own files, not through collectstatic) — STATICFILES_DIRS/STATIC_ROOT
+# stay reserved for Django's own static assets (admin, DRF browsable API).
 STATICFILES_DIRS = []
-if os.path.exists(FRONTEND_DIST):
-    STATICFILES_DIRS.append(FRONTEND_DIST)
 
-# WhiteNoise Configuration for serving static and root assets
+# WhiteNoise serves frontend/dist directly at the site root (e.g.
+# frontend/dist/assets/app.js -> /assets/app.js), independent of collectstatic.
 WHITENOISE_ROOT = FRONTEND_DIST
 WHITENOISE_INDEX_FILE = True
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
