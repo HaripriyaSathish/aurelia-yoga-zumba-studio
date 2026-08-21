@@ -29,6 +29,13 @@ INSTALLED_APPS = [
     'studio',
 ]
 
+# Cloudinary (media file storage) — used when CLOUDINARY_URL is set (e.g. in production).
+# Falls back to local disk storage for local dev if unset.
+CLOUDINARY_URL = os.getenv('CLOUDINARY_URL', '')
+if CLOUDINARY_URL:
+    INSTALLED_APPS = ['cloudinary_storage'] + INSTALLED_APPS + ['cloudinary']
+    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+    
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
