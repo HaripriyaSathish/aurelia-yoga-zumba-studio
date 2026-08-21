@@ -1,5 +1,19 @@
+import os
+
 from django.db import models
 from django.utils.text import slugify
+
+
+def video_storage():
+    """Cloudinary's default media storage hardcodes resource_type='image', which
+    Cloudinary rejects for actual video files — video fields need the dedicated
+    VideoMediaCloudinaryStorage instead. Falls back to the normal default storage
+    (local disk in dev) when Cloudinary isn't configured."""
+    if os.getenv('CLOUDINARY_URL'):
+        from cloudinary_storage.storage import VideoMediaCloudinaryStorage
+        return VideoMediaCloudinaryStorage()
+    from django.core.files.storage import default_storage
+    return default_storage
 
 
 class SingletonModel(models.Model):
@@ -93,7 +107,7 @@ class HeroContent(SingletonModel):
     subtitle = models.TextField(
         default="Premium yoga, energetic Zumba and holistic wellness programs designed by certified experts to transform your mind, body and spirit."
     )
-    background_video = models.FileField(upload_to='hero/videos/', blank=True, null=True)
+    background_video = models.FileField(upload_to='hero/videos/', storage=video_storage, blank=True, null=True)
     background_video_url = models.URLField(
         max_length=500,
         blank=True,
@@ -286,7 +300,7 @@ class FitnessProgram(models.Model):
     slug = models.SlugField(max_length=180, unique=True, blank=True)
     image = models.ImageField(upload_to='programs/fitness/', blank=True, null=True)
     image_url = models.URLField(max_length=500, blank=True)
-    preview_video = models.FileField(upload_to='programs/fitness/videos/', blank=True, null=True)
+    preview_video = models.FileField(upload_to='programs/fitness/videos/', storage=video_storage, blank=True, null=True)
     preview_video_url = models.URLField(max_length=500, blank=True)
     description = models.TextField(blank=True)
     duration = models.CharField(max_length=60, default="45 mins")
@@ -390,7 +404,7 @@ class GalleryItem(models.Model):
     caption = models.CharField(max_length=180, blank=True)
     image = models.ImageField(upload_to='gallery/images/', blank=True, null=True)
     image_url = models.URLField(max_length=500, blank=True)
-    video = models.FileField(upload_to='gallery/videos/', blank=True, null=True)
+    video = models.FileField(upload_to='gallery/videos/', storage=video_storage, blank=True, null=True)
     video_url = models.URLField(max_length=500, blank=True)
     thumbnail = models.ImageField(upload_to='gallery/thumbs/', blank=True, null=True)
     thumbnail_url = models.URLField(max_length=500, blank=True)
@@ -426,7 +440,7 @@ class GalleryItem(models.Model):
 class VideoReel(models.Model):
     """Short 10-30 second preview / reel videos."""
     title = models.CharField(max_length=150, default="Morning Flow")
-    video = models.FileField(upload_to='reels/', blank=True, null=True)
+    video = models.FileField(upload_to='reels/', storage=video_storage, blank=True, null=True)
     video_url = models.URLField(max_length=500, blank=True)
     poster_image = models.ImageField(upload_to='reels/posters/', blank=True, null=True)
     poster_image_url = models.URLField(max_length=500, blank=True)
@@ -511,7 +525,7 @@ class CTASection(SingletonModel):
         max_length=500, blank=True,
         default="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?q=80&w=1920&auto=format&fit=crop",
     )
-    background_video = models.FileField(upload_to='cta/videos/', blank=True, null=True)
+    background_video = models.FileField(upload_to='cta/videos/', storage=video_storage, blank=True, null=True)
     background_video_url = models.URLField(max_length=500, blank=True)
     primary_button_text = models.CharField(max_length=60, default="Book Free Trial")
     primary_button_link = models.CharField(max_length=120, default="#contact")

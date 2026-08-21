@@ -178,3 +178,24 @@ EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER', '')
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', '')
 DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL', 'AURELIA Yoga & Zumba Studio <studio@aureliawellness.com>')
 ADMIN_EMAIL = os.getenv('ADMIN_EMAIL', 'studio@aureliawellness.com')
+
+
+# Gunicorn doesn't print unhandled request exceptions the way `runserver` does,
+# so without this, production 500 errors give no traceback anywhere — just a
+# blank "500 Internal Server Error" in the logs.
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django.request': {
+            'handlers': ['console'],
+            'level': 'ERROR',
+            'propagate': False,
+        },
+    },
+}
